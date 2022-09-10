@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Gazo's Cauldron</title>
+    <script src="izi.js"></script>
+    <link rel="icon" type="image/icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-image: url('b2.png');background-repeat: space;background-size: cover">
+
+<h1 style="text-align: center;font-family: Algerian,fantasy;font-size: 48px">Gazo's Oxymoronic Cauldron</h1>
+
+<div>
+
+    <table style="margin-left: 15%;margin-right: 15%;">
+        <colgroup>
+            <col span="1" style="width: 20%">
+            <col span="1" style="width: 20%">
+            <col span="1" style="width: 20%">
+        </colgroup>
+
+        <tbody>
+
+        <tr>
+            <td>
+                <h4>Travel Speed & Conversion</h4>
+
+                <p>Character Speed = (Feet/6)</p>
+                Character Speed (Feet)
+                <input type="number" id="SpeedF" name="SpeedF" value="30" onchange=" speedf2m();speed_char();">
+                &nbsp; Speed (Miles/h) &nbsp;&nbsp;
+                <input type="number" id="SpeedM" name="SpeedM" value="3" onchange=" speedm2f();speed_char();">
+
+                <br><br>
+
+                Distance (Miles) &nbsp;
+                <input type="number" id="DistanceM" name="DistanceM" value="25" onchange=" speed_char();">
+                <br><br>
+                <p style="text-align: center">Travel time:</p>
+                <p style="text-align: center" id="Travel_time"><br></p>
+            </td>
+
+            <td>
+                <h4>Area Conversion</h4>
+                <br><br>
+
+
+                Area (ft³) &nbsp;
+                <input type="number" id="Area3" name="Area3" value="5" onchange=" area_calc();">
+                &nbsp; Width &nbsp;
+                <input type="number" id="Area_Width" name="Area_Width" value="0" onchange=" area_calc();">
+
+
+                <br><br>
+                <p style="text-align: center">Area covered:</p>
+                <p style="text-align: center" id="Area_Converted"><br></p>
+
+
+            </td>
+            <td>
+                <h4>Round <-> Time</h4>
+                <br>
+
+                Time (Minutes) &nbsp;
+                <input type="number" id="Round_Minutes" name="Minutes" value="1" onchange=" rounds_t2r();">
+
+                &nbsp; Rounds &nbsp;
+                <input type="number" id="Round_Rounds" name="Rounds" value="10" onchange=" rounds_r2t();">
+
+                <br>
+
+                Time (Seconds) &nbsp;
+                <input type="number" id="Round_Seconds" name="Seconds" value="0" onchange=" rounds_t2r();">
+
+                <br><br><br><br><br><br>
+
+
+
+
+            </td>
+
+        </tr>
+        </tbody>
+
+    </table>
+
+</div>
+</body>
+<!--
+                <p>
+                    30ft	=	5ft/s <br>
+                    60ft	=	10ft/s
+                    &nbsp; | &ensp; | &emsp;
+                </p>
+
+
+                Area (ft²) &nbsp;
+                <input type="number" id="Area2" name="Area2" value="25" onchange=" speed_char();">
+
+
+                Distance (Feet)  &emsp;&emsp;&ensp;&nbsp;
+                <input type="number" id="DistanceF" name="Distance" value="25" onchange=" distancef2m();speed_con();">
+-->
+</html>
