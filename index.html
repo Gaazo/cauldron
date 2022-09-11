@@ -5,6 +5,7 @@
     <title>Gazo's Cauldron</title>
     <link rel="icon" type="image/icon" href="/datum/media/icon.png">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body style="background-image: url('/datum/media/b2.png');background-repeat: space;background-size: cover">
@@ -13,12 +14,7 @@
 
 <div>
 
-    <table style="margin-left: 15%;margin-right: 15%;">
-        <colgroup>
-            <col span="1" style="width: 20%">
-            <col span="1" style="width: 20%">
-            <col span="1" style="width: 20%">
-        </colgroup>
+    <table style="margin-left: 8%;margin-right: 8%">
 
         <tbody>
 
@@ -67,57 +63,134 @@
         </tbody>
     </table>
 
-    <table style="margin-left: 15%;margin-right: 15%;">
-        <colgroup>
-            <col span="1" style="width: 30%">
-            <col span="1" style="width: 70%">
-
-        </colgroup>
+    <table style="margin-left: 8%;margin-right: 8%">
         <tbody>
             <tr>
                 <td style="text-align: center">
-                    <h4>Classes</h4>
-                    <button id="Artificer_Name" onclick="relay();">Artificer</button>
-                    <button onclick="relay();">Barbarian</button>
-                    <button>Bard</button><br>
-                    <button>Cleric</button>
-                    <button id ="Druid_Name" onclick="relay();">Druid</button>
-                    <button>Fighter</button>
 
+                    <h4>Character</h4>
+                    <div class="button_char">
+
+                    <button>Classes (Overview)</button>
+                    <br><br>
+                    <button>Feats</button>
+                    <button>Races</button>
+
+                    </div>
+
+                    <hr>
+
+                    <h4>Classes</h4>
+                    <div class="button_class">
+                    <button>Artificer</button>
+                    <button>Barbarian</button>
+                    <button>Bard</button>
+                    <br>
+                    <button>Cleric</button>
+                    <button>Druid</button>
+                    <button>Fighter</button>
                     <button>Monk</button>
-                    <button>Paladin</button><br>
+                    <button>Paladin</button>
+                    <br>
                     <button>Ranger</button>
                     <button>Rogue</button>
                     <button>Sorcerer</button>
                     <button>Warlock</button>
                     <button>Wizard</button>
 
-                    <hr>
-                    <h4>Handbooks</h4>
-                    Sorcerer
-                    Warlock
-                    Wizard
-                    <hr>
-                    <h4>Spells</h4>
 
-
+                    </div>
                 </td>
-                <td style="background: #d99f0d;text-align: center">
-                    <h2  id="Desc_Name"><br></h2>
-                    <p id="Desc_Desc"><br></p>
-                    <div id="run">
+                <td style="text-align: center">
+                    <div class="button_spells">
+                        <button style="font-size: 16px">Spells</button>
+
+                        <hr>
+                        <h4>Alternative (External)</h4>
+                        <button style="font-size: 16px">Spells 2</button>
+
+                        <br><br>
+                        <button>Artificer</button>
+                        <button>Bard</button>
+                        <button>Cleric</button>
+                        <br>
+                        <button>Druid</button>
+                        <button>Paladin</button>
+                        <button>Ranger</button>
+                        <br>
+                        <button>Sorcerer</button>
+                        <button>Warlock</button>
+                        <button>Wizard</button>
+                        <br>
+                        <button>Dunamancy</button>
+                        <button>Ritual</button>
+
+                        <br>
+                    </div>
+                </td>
+
+
+                <td style="text-align: center">
+                    <h4>Handbooks</h4>
+                    <div class="button_handbook">
+                        <button>Artificer</button>
+                        <button>Barbarian</button>
+                        <button>Bard</button>
+                        <br>
+                        <button>Cleric</button>
+                        <button>Druid</button>
+                        <button>Fighter</button>
+                        <button>Monk</button>
+                        <button>Paladin</button>
+                        <br>
+                        <button>Ranger</button>
+                        <button>Rogue</button>
+                        <button>Sorcerer</button>
+                        <button>Warlock</button>
+                        <button>Wizard</button>
 
                     </div>
 
+
+
                 </td>
+                <td style="text-align: center">
+                    <h4>Miscellaneous</h4>
+                    <div class="button_misc">
+                        <button>Bestiary</button>
+                        <br>
+                        <button>Items</button>
+                        <button>Vehicles</button>
+                        <br>
+                        <button>Actions</button>
+                        <button>Conditions</button>
+                        <br>
+                        <button>Rules</button>
+                        <button>Misc. Rules</button>
+
+                    </div>
 
 
+                </td>
             </tr>
+
+
 
 
         </tbody>
 
     </table>
+    <br>
+    <div style="display: flex; justify-content: center" id = "display_setting">
+        <button onclick="pop_display()">Bunshin</button>
+    </div>
+    <br>
+
+    <div style="display: flex; justify-content: center" id="display"></div>
+
+
+
+
 
 </div>
 <script src="script/jquery-3.6.1.min.js"></script>
