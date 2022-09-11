@@ -5,7 +5,13 @@ input {
 }
 h1 {
     text-align: center;
-}h4 {
+}
+h2{
+    text-align: center;
+    font-family: Algerian, fantasy;
+    font-size: 36px;
+}
+h4 {
      text-align: center;
     margin-top: 2%;
  }
@@ -15,7 +21,22 @@ h1 {
 
  }
 td {
+    vertical-align: top;
     max-width: 100%;white-space: nowrap;
     border:3px solid black;padding: 2px;
 
 }
+.button2{
+
+    border-radius:16px;
+    font-size: 16px;
+    font-family: Algerian, fantasy;
+}
+
+
+button{
+    border-radius:16px;
+    font-size: 16px;
+    font-family: Algerian, fantasy;
+}
+

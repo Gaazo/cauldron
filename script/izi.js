@@ -1,6 +1,3 @@
-
-
-
 function speed_char(){
 
     let speed = document.getElementById("SpeedF").value;
@@ -59,6 +56,53 @@ function rounds_t2r(){
     let time = (seconds/6) + (minutes*10);
     document.getElementById("Round_Rounds").value = Math.trunc(time);
 }
+
+let selection = "n";
+
+$(function (){
+    $('button').on({
+        mouseenter: function (){
+            $(this).css("color","#d99f0d");
+            $(this).css("background","#000000");
+
+
+
+        },
+        mouseleave: function (){
+            if(selection===this) {
+
+            }
+
+            else {
+                $(this).css("color", "#000000");
+                $(this).css("background", "#FFFFFF");
+            }
+        },
+
+        click: function (){
+            //Highlights
+            if(selection!=="n"){
+                $(selection).css("color", "#000000");
+                $(selection).css("background", "#FFFFFF");
+            }
+            $(this).css("color","#d99f0d");
+            $(this).css("background","#000000");
+            selection=this;
+
+            //Push name in desc
+            $("#Desc_Name").text(this.innerText);
+            console.log(this.innerText);
+
+            //Push content into desc
+            $('#Desc_Desc').text("Oui c'est "+selection.innerText);
+            $("#run").load("datum/classes/warlock.html")
+
+        }
+    }
+
+)})
+
+
 
 
 //let hours = Math.trunc((distance*5280)/speed/60/10);
