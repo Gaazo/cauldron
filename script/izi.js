@@ -59,7 +59,7 @@ function rounds_t2r(){
 let selection = "n";
 let display_number = 0;
 
-function pop_display(){
+function push_display(){
     display_number++;
     let frame = document.createElement("iframe");
     frame.setAttribute("src", "");
@@ -67,7 +67,12 @@ function pop_display(){
     document.getElementById("display").appendChild(frame);
 }
 
-pop_display();
+function pop_display(){
+    document.getElementById("display").innerHTML="";
+    push_display();
+}
+
+push_display();
 
 //hover
 $(function (){
