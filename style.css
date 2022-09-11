@@ -23,10 +23,6 @@ td {
     border:3px solid black;padding: 1px;
 
 }
-.button_class{}
-.button_spells{}
-.button_handbook{}
-
 iframe
 {
     border: 0;
@@ -43,8 +39,14 @@ iframe
     font-family: Algerian, fantasy;
 }
 button{
+    display: inline-block;
+    cursor: pointer;
     border-radius:16px;
     font-size: 16px;
     font-family: Algerian, fantasy;
 }
-
+.button_class{}
+.button_char{}
+.button_spells{}
+.button_handbook{}
+.button_misc{}

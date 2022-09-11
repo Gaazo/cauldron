@@ -69,16 +69,17 @@ function pop_display(){
 
 pop_display();
 
+//hover
 $(function (){
     $('button').on({
         mouseenter: function (){
+
+
             $(this).css("color","#d99f0d");
             $(this).css("background","#000000");
         },
         mouseleave: function (){
-            if(selection===this) {
-
-            }
+            if(selection===this) {}
 
             else {
                 $(this).css("color", "#000000");
@@ -94,89 +95,79 @@ $(function (){
             }
             $(this).css("color","#d99f0d");
             $(this).css("background","#000000");
+            selection=this;
 
-            if(this.innerText==="Bunshin"){
-                console.log("Here");
 
-            }
-
-            else{
-                selection=this;
-                console.log("Ting is "+selection.innerText);
-
-            }
         }
     }
 
 )})
-
 $(function (){
     $('.button_class').on({
         click: function (){
-
-            //document.getElementById("show").src='http://dnd5e.wikidot.com/spells:'+selection.innerText.toLowerCase();
             let end = "_phb";
             if (selection.innerText==="Artificer"){end="tce";}
             document.getElementById("show"+display_number).src='https://5e.tools/classes.html#'+selection.innerText.toLowerCase()+end;
-        }
-    })
-})
+
+        }})})
+
+$(function (){
+    $('.button_char').on({
+        click: function (){
+            if (selection.innerText === "Classes (Overview)") {
+                document.getElementById("show" + display_number).src = 'https://arcaneeye.com/dm-tools-5e/dnd-5e-classes/#Quick_Look_at_DnD_Classes';
+            }
+            if (selection.innerText === "Feats") {
+                document.getElementById("show" + display_number).src = 'https://5e.tools/feats.html';
+            }
+            if (selection.innerText === "Races") {
+                document.getElementById("show" + display_number).src = 'https://arcaneeye.com/players/dnd-5e-races/#A-Quick-Overview-of-DnD-Races';
+            }
+        }})})
 
 $(function (){
     $('.button_spells').on({
         click: function (){
 
-            let end = selection.innerText;
-            if(selection.innerText==="Spells"){document.getElementById("show"+display_number).src='https://5e.tools/spells.html';}
+                let end = selection.innerText;
+                if (selection.innerText === "Spells") {
+                    document.getElementById("show" + display_number).src = 'https://5e.tools/spells.html';}
+                else {
+                    if (end === "Spells 2") {
+                        end = "";
+                    }
+                    let win = window.open('http://dnd5e.wikidot.com/spells:' + end.toLowerCase());
+                    if (win) {win.focus();}
+                }
 
-            else {
-                if(end==="Spells 2"){end="";}
-                let win = window.open('http://dnd5e.wikidot.com/spells:'+end.toLowerCase());
-                if(win){win.focus();}
-            }
 
+        }})})
 
-        }
-    })
-})
 $(function (){
     $('.button_handbook').on({
         click: function (){
-
-            //$('#Desc_Desc').text("Zozobozolozo "+selection.innerText);
-            //let win = window.open('https://rpgbot.net/dnd5/characters/classes/'+selection.innerText);
-            //if(win){win.focus();}
-            document.getElementById("show"+display_number).src='https://rpgbot.net/dnd5/characters/classes/' + selection.innerText;
-
-        }
-    })
-})
+            if(selection!=="n"){
+                document.getElementById("show"+display_number).src='https://rpgbot.net/dnd5/characters/classes/' + selection.innerText;
+            }
+        }})})
 
 $(function (){
     $('.button_misc').on({
         click: function (){
+
             let end = selection.innerText.toLowerCase();
-            if (selection.innerText==="Rules"){end = "quickreference";console.log("here");}
+            if (selection.innerText==="Rules"){end = "quickreference";}
             if (selection.innerText==="Misc. Rules"){end = "variantrules";}
             if (selection.innerText==="Conditions"){end = "conditionsdiseases";}
             console.log('https://5e.tools/' + end+".html");
             document.getElementById("show"+display_number).src='https://5e.tools/' + end+".html";
 
-
-        }
-    })
-})
-$(function (){
-    $('.button_char').on({
-        click: function (){
-            if (selection.innerText==="Classes (Overview)"){document.getElementById("show"+display_number).src='https://arcaneeye.com/dm-tools-5e/dnd-5e-classes/#Quick_Look_at_DnD_Classes';}
-            if (selection.innerText==="Feats"){document.getElementById("show"+display_number).src='https://5e.tools/feats.html';}
-            if (selection.innerText==="Races"){document.getElementById("show"+display_number).src='https://arcaneeye.com/players/dnd-5e-races/#A-Quick-Overview-of-DnD-Races';}
+        }})})
 
 
-        }
-    })
-})
+
+
+
 //let hours = Math.trunc((distance*5280)/speed/60/10);
 //let minutes = Math.trunc((( distance*5280)/speed/10)%60);
 
