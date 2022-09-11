@@ -1,21 +1,50 @@
 
-
 input {
     width: 16%;
 }
 h1 {
     text-align: center;
-}h4 {
-     text-align: center;
+}
+h2{
+    text-align: center;
+    font-family: Algerian, fantasy;
+    font-size: 36px;
+}
+h4 {
+    text-align: center;
     margin-top: 2%;
+    font-family: Algerian,fantasy;
  }
  .td2 {
-     max-width: 100%;white-space: nowrap;
-     border:3px solid black;padding: 2px;
 
  }
 td {
-    max-width: 100%;white-space: nowrap;
-    border:3px solid black;padding: 2px;
+    vertical-align: top;
+    border:3px solid black;padding: 1px;
 
 }
+.button_class{}
+.button_spells{}
+.button_handbook{}
+
+iframe
+{
+    border: 0;
+    flex-grow: 1;
+    margin: 0;
+    width: 100%;
+    overflow:hidden;
+    height:1000px;
+}
+
+.tops{
+    border-radius:16px;
+    font-size: 16px;
+    font-family: Algerian, fantasy;
+}
+button{
+    border-radius:16px;
+    font-size: 16px;
+    font-family: Algerian, fantasy;
+}
+

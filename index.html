@@ -3,23 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <title>Gazo's Cauldron</title>
-    <script src="izi.js"></script>
-    <link rel="icon" type="image/icon" href="icon.png">
+    <link rel="icon" type="image/icon" href="/datum/media/icon.png">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body style="background-image: url('b2.png');background-repeat: space;background-size: cover">
+<body style="background-image: url('/datum/media/b2.png');background-repeat: space;background-size: cover">
 
 <h1 style="text-align: center;font-family: Algerian,fantasy;font-size: 48px">Gazo's Oxymoronic Cauldron</h1>
 
 <div>
 
-    <table style="margin-left: 15%;margin-right: 15%;">
-        <colgroup>
-            <col span="1" style="width: 20%">
-            <col span="1" style="width: 20%">
-            <col span="1" style="width: 20%">
-        </colgroup>
+    <table style="margin-left: 8%;margin-right: 8%">
 
         <tbody>
 
@@ -28,15 +23,14 @@
                 <h4>Travel Speed & Conversion</h4>
 
                 <p>Character Speed = (Feet/6)</p>
-                Character Speed (Feet)
-                <input type="number" id="SpeedF" name="SpeedF" value="30" onchange=" speedf2m();speed_char();">
-                &nbsp; Speed (Miles/h) &nbsp;&nbsp;
-                <input type="number" id="SpeedM" name="SpeedM" value="3" onchange=" speedm2f();speed_char();">
+
+                <label for="SpeedF">Character Speed (Feet)</label>&nbsp;<input type="number" id="SpeedF" name="SpeedF" value="30" onchange=" speedf2m();speed_char();">
+                <label for="SpeedM">Speed (Miles/h)</label>&nbsp;<input type="number" id="SpeedM" name="SpeedM" value="3" onchange=" speedm2f();speed_char();">
 
                 <br><br>
 
-                Distance (Miles) &nbsp;
-                <input type="number" id="DistanceM" name="DistanceM" value="25" onchange=" speed_char();">
+
+                <label for="DistanceM">Distance (Miles)</label>&nbsp;<input type="number" id="DistanceM" name="DistanceM" value="25" onchange=" speed_char();">
                 <br><br>
                 <p style="text-align: center">Travel time:</p>
                 <p style="text-align: center" id="Travel_time"><br></p>
@@ -46,47 +40,161 @@
                 <h4>Area Conversion</h4>
                 <br><br>
 
-
-                Area (ft³) &nbsp;
-                <input type="number" id="Area3" name="Area3" value="5" onchange=" area_calc();">
-                &nbsp; Width &nbsp;
-                <input type="number" id="Area_Width" name="Area_Width" value="0" onchange=" area_calc();">
-
+                <label for="Area3">Area (ft³)</label>&nbsp;<input type="number" id="Area3" name="Area3" value="5" onchange=" area_calc();">
+                &nbsp;
+                <label for="Area_Width">Width</label>&nbsp;<input type="number" id="Area_Width" name="Area_Width" value="0" onchange=" area_calc();">
 
                 <br><br>
                 <p style="text-align: center">Area covered:</p>
                 <p style="text-align: center" id="Area_Converted"><br></p>
 
-
             </td>
             <td>
                 <h4>Round <-> Time</h4>
                 <br>
-
-                Time (Minutes) &nbsp;
-                <input type="number" id="Round_Minutes" name="Minutes" value="1" onchange=" rounds_t2r();">
-
-                &nbsp; Rounds &nbsp;
-                <input type="number" id="Round_Rounds" name="Rounds" value="10" onchange=" rounds_r2t();">
-
+                <label for="Round_Minutes">Time (Minutes)</label>&nbsp;<input type="number" id="Round_Minutes" name="Minutes" value="1" onchange=" rounds_t2r();">
+                &nbsp;
+                <label for="Round_Rounds">Rounds</label>&nbsp;<input type="number" id="Round_Rounds" name="Rounds" value="10" onchange=" rounds_r2t();">
                 <br>
-
-                Time (Seconds) &nbsp;
-                <input type="number" id="Round_Seconds" name="Seconds" value="0" onchange=" rounds_t2r();">
-
-                <br><br><br><br><br><br>
-
-
-
-
+                <label for="Round_Seconds">Time (Seconds)</label>&nbsp;<input type="number" id="Round_Seconds" name="Seconds" value="0" onchange=" rounds_t2r();">
             </td>
 
         </tr>
         </tbody>
-
     </table>
 
+    <table style="margin-left: 8%;margin-right: 8%">
+        <tbody>
+            <tr>
+                <td style="text-align: center">
+
+                    <h4>Character</h4>
+                    <div class="button_char">
+
+                    <button>Classes (Overview)</button>
+                    <br><br>
+                    <button>Feats</button>
+                    <button>Races</button>
+
+                    </div>
+
+                    <hr>
+
+                    <h4>Classes</h4>
+                    <div class="button_class">
+                    <button>Artificer</button>
+                    <button>Barbarian</button>
+                    <button>Bard</button>
+                    <br>
+                    <button>Cleric</button>
+                    <button>Druid</button>
+                    <button>Fighter</button>
+                    <button>Monk</button>
+                    <button>Paladin</button>
+                    <br>
+                    <button>Ranger</button>
+                    <button>Rogue</button>
+                    <button>Sorcerer</button>
+                    <button>Warlock</button>
+                    <button>Wizard</button>
+
+
+                    </div>
+                </td>
+                <td style="text-align: center">
+                    <div class="button_spells">
+                        <button style="font-size: 16px">Spells</button>
+
+                        <hr>
+                        <h4>Alternative (External)</h4>
+                        <button style="font-size: 16px">Spells 2</button>
+
+                        <br><br>
+                        <button>Artificer</button>
+                        <button>Bard</button>
+                        <button>Cleric</button>
+                        <br>
+                        <button>Druid</button>
+                        <button>Paladin</button>
+                        <button>Ranger</button>
+                        <br>
+                        <button>Sorcerer</button>
+                        <button>Warlock</button>
+                        <button>Wizard</button>
+                        <br>
+                        <button>Dunamancy</button>
+                        <button>Ritual</button>
+
+                        <br>
+                    </div>
+                </td>
+
+
+                <td style="text-align: center">
+                    <h4>Handbooks</h4>
+                    <div class="button_handbook">
+                        <button>Artificer</button>
+                        <button>Barbarian</button>
+                        <button>Bard</button>
+                        <br>
+                        <button>Cleric</button>
+                        <button>Druid</button>
+                        <button>Fighter</button>
+                        <button>Monk</button>
+                        <button>Paladin</button>
+                        <br>
+                        <button>Ranger</button>
+                        <button>Rogue</button>
+                        <button>Sorcerer</button>
+                        <button>Warlock</button>
+                        <button>Wizard</button>
+
+                    </div>
+
+
+
+                </td>
+                <td style="text-align: center">
+                    <h4>Miscellaneous</h4>
+                    <div class="button_misc">
+                        <button>Bestiary</button>
+                        <br>
+                        <button>Items</button>
+                        <button>Vehicles</button>
+                        <br>
+                        <button>Actions</button>
+                        <button>Conditions</button>
+                        <br>
+                        <button>Rules</button>
+                        <button>Misc. Rules</button>
+
+                    </div>
+
+
+                </td>
+            </tr>
+
+
+
+
+        </tbody>
+
+    </table>
+    <br>
+    <div style="display: flex; justify-content: center" id = "display_setting">
+        <button onclick="pop_display()">Bunshin</button>
+    </div>
+    <br>
+
+    <div style="display: flex; justify-content: center" id="display"></div>
+
+
+
+
+
 </div>
+<script src="script/jquery-3.6.1.min.js"></script>
+<script src="script/izi.js"></script>
 </body>
 <!--
                 <p>
