@@ -169,8 +169,33 @@ $(function (){
 
         }})})
 
+const lyrics_text =[
+    "I got a gal who's always late\nAnytime we have a date",
+    "I'm gonna walk right up to her gate\nAnd see if I can get it straight",
+    "Is you is or is you ain't my baby?\n" +
+    "The way you're acting lately makes me doubt\n",
+    "Yous is still my baby, baby\n" +
+    "Seems my flame in your heart's done gone out\n",
+    "A woman is a creature\n" +
+    "That has always been strange\n" +
+    "Just when you're sure of one\n" +
+    "You find she's gone and made a change\n",
+    "Is you is or is you ain't my baby?\n" +
+    "Maybe baby's found somebody new\n",
+    "Or is my baby still my baby true?\n",
+    "But I love her\n" +
+    "Yes I love her",
+    "'Cause I want her\n" +
+    "I'm gonna ask her"
 
+]
 
+function lyrics(){
+    document.getElementById("lyrics").innerText=
+        lyrics_text[Math.floor(Math.random() * lyrics_text.length)];
+}
+
+lyrics();
 
 
 //let hours = Math.trunc((distance*5280)/speed/60/10);
