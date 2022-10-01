@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Algeria';
+    src: url('datum/font/Algeria.ttf') format('truetype');
+}
 
 input {
     width: 16%;
@@ -7,13 +11,13 @@ h1 {
 }
 h2{
     text-align: center;
-    font-family: Algerian, fantasy;
+    font-family: Algeria, fantasy;
     font-size: 36px;
 }
 h4 {
     text-align: center;
     margin-top: 2%;
-    font-family: Algerian,fantasy;
+    font-family: Algeria,fantasy;
  }
  .td2 {
 
@@ -36,17 +40,19 @@ iframe
 .tops{
     border-radius:16px;
     font-size: 16px;
-    font-family: Algerian, fantasy;
+    font-family: Algeria, fantasy;
 }
 button{
     display: inline-block;
     cursor: pointer;
     border-radius:16px;
     font-size: 16px;
-    font-family: Algerian, fantasy;
+    font-family: Algeria, fantasy;
 }
+
 .button_class{}
 .button_char{}
 .button_spells{}
 .button_handbook{}
 .button_misc{}
+
